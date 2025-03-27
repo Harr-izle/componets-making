@@ -6,56 +6,108 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface MyAlert {
+        "bordered": boolean;
+        "dismissible": boolean;
+        "icon"?: string;
+        "listItems"?: string;
+        "message": string;
+        "type": 'success' | 'danger' | 'warning' | 'info';
+    }
+    interface MyAvatar {
+        "alt"?: string;
+        "bordered"?: boolean;
+        "initials"?: string;
+        "size": 'small' | 'medium' | 'large';
+        "src"?: string;
+        "stacked"?: boolean;
+        "status"?: 'online' | 'offline';
+        "tooltip"?: string;
+    }
+    interface MyButton {
+        "name": string;
+        "state"?: 'default' | 'alternative' | 'dark' |'light'| 'green'| 'red'| 'yellow'|'purple';
+        "type": string;
     }
 }
+export interface MyAlertCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMyAlertElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLMyAlertElementEventMap {
+        "alertDismissed": void;
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    interface HTMLMyAlertElement extends Components.MyAlert, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLMyAlertElementEventMap>(type: K, listener: (this: HTMLMyAlertElement, ev: MyAlertCustomEvent<HTMLMyAlertElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLMyAlertElementEventMap>(type: K, listener: (this: HTMLMyAlertElement, ev: MyAlertCustomEvent<HTMLMyAlertElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLMyAlertElement: {
+        prototype: HTMLMyAlertElement;
+        new (): HTMLMyAlertElement;
+    };
+    interface HTMLMyAvatarElement extends Components.MyAvatar, HTMLStencilElement {
+    }
+    var HTMLMyAvatarElement: {
+        prototype: HTMLMyAvatarElement;
+        new (): HTMLMyAvatarElement;
+    };
+    interface HTMLMyButtonElement extends Components.MyButton, HTMLStencilElement {
+    }
+    var HTMLMyButtonElement: {
+        prototype: HTMLMyButtonElement;
+        new (): HTMLMyButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "my-alert": HTMLMyAlertElement;
+        "my-avatar": HTMLMyAvatarElement;
+        "my-button": HTMLMyButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface MyAlert {
+        "bordered"?: boolean;
+        "dismissible"?: boolean;
+        "icon"?: string;
+        "listItems"?: string;
+        "message"?: string;
+        "onAlertDismissed"?: (event: MyAlertCustomEvent<void>) => void;
+        "type"?: 'success' | 'danger' | 'warning' | 'info';
+    }
+    interface MyAvatar {
+        "alt"?: string;
+        "bordered"?: boolean;
+        "initials"?: string;
+        "size"?: 'small' | 'medium' | 'large';
+        "src"?: string;
+        "stacked"?: boolean;
+        "status"?: 'online' | 'offline';
+        "tooltip"?: string;
+    }
+    interface MyButton {
+        "name"?: string;
+        "state"?: 'default' | 'alternative' | 'dark' |'light'| 'green'| 'red'| 'yellow'|'purple';
+        "type"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "my-alert": MyAlert;
+        "my-avatar": MyAvatar;
+        "my-button": MyButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-alert": LocalJSX.MyAlert & JSXBase.HTMLAttributes<HTMLMyAlertElement>;
+            "my-avatar": LocalJSX.MyAvatar & JSXBase.HTMLAttributes<HTMLMyAvatarElement>;
+            "my-button": LocalJSX.MyButton & JSXBase.HTMLAttributes<HTMLMyButtonElement>;
         }
     }
 }

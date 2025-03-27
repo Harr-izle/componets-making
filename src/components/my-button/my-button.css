@@ -1,0 +1,99 @@
+.btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.default {
+  background-color: #1976D2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  
+}
+.default:hover {
+  background-color: #1565C0
+}
+
+
+.alternative {
+  background-color: #374151;
+  color: #EEEEEE;
+  border: #EEEEEE;
+  border-radius: 8px;
+
+}
+.alternative:hover {
+  background-color: #EEEEEE;
+  color: #212121;
+}
+
+.dark {
+  background-color: #424242;
+  color: white;
+  border: none;
+  border-radius: 8px;
+ 
+}
+.dark:hover {
+  background-color: #616161;
+}
+
+.light {
+  background-color: #212121;
+  color: #EEEEEE;
+  border: #EEEEEE;
+  border-radius: 8px;
+  
+}
+.light:hover {
+  background-color: #424242;
+
+}
+
+.green {
+  background-color: #388E3C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+}
+.green:hover {
+  background-color: #2E7D32;
+}
+
+.red {
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+}
+.red:hover {
+  background-color: #C62828;
+}
+
+.yellow {
+  background-color: #ffe400;
+  color: white;
+  border: none;
+  border-radius: 8px;
+
+}
+.yellow:hover {
+  background-color: #FFEB3B;
+}
+
+.purple {
+  background-color: #7B1FA2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  
+}
+.purple:hover {
+  background-color: #6A1B9A;
+}
+
