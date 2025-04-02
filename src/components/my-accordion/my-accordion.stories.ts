@@ -44,20 +44,3 @@ export const Bordered: Story = {
   `
 }
 
-
-
-
-export const NestedContent: Story = {
-  render: () => `
-    <my-accordion header="Accordion with Complex Content">
-      <div slot="content">
-        <h3>Nested Heading</h3>
-        <p>This is a paragraph inside the accordion.</p>
-        <ul>
-          <li>List item 1</li>
-          <li>List item 2</li>
-        </ul>
-      </div>
-    </my-accordion>
-  `
-};
