@@ -1,0 +1,121 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0.25rem;
+  background-color: #DBEAFE;
+  border: 1px solid #60A5FA;
+  color: #60A5FA;
+  font-weight: 600;
+  cursor: default;
+}
+
+.large {
+  font-size: 1.5rem;
+  padding: 1rem 2rem;
+  
+}
+
+.bordered {
+  border: 2px solid #5fa5fa;
+  background-color: transparent;
+  color: #5fa5fa;
+}
+
+.pill,
+.pill-primary,
+.pill-success,
+.pill-warning,
+.pill-danger,
+.pill-info {
+  border-radius: 9999px;
+}
+
+.pill {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.pill-primary {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.pill-success {
+  background-color: #10b981;
+  color: white;
+}
+
+.pill-warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.pill-danger {
+  background-color: #ef4444;
+  color: white;
+}
+
+.pill-info {
+  background-color: #06b6d4;
+  color: white;
+}
+
+.link {
+  color: #60A5FA;
+  text-decoration: none;
+  cursor: pointer;
+  
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.notification {
+  position: relative;
+  
+}
+
+.notification::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  border-radius: 70%;
+}
+
+.button {
+  display: inline-flex;
+  background-color: #5fa5fa;
+  color: #60A5FA;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-only {
+  background: none;
+  border: none;
+  color: #5fa5fa;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.dismissible {
+  position: relative;
+}
+
+.close-btn {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  color: #60A5FA;
+  cursor: pointer;
+}

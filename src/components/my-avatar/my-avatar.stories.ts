@@ -39,12 +39,12 @@ export default meta;
 
 export const Default: Story = {
   render: Template,
-  args: { src: "https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740" },
+  args: { src: "https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg" },
 };
 
 export const Bordered: Story = {
   render: Template,
-  args: { src: "https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740", bordered: true },
+  args: { src: "https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg", bordered: true },
 };
 
 export const Placeholder: Story = {
@@ -59,21 +59,25 @@ export const Initials: Story = {
 
 export const WithTooltip: Story = {
   render: Template,
-  args: { src: "https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740", tooltip: "Athena Grant" },
+  args: { src: "https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg", tooltip: "Athena Grant" },
 };
 
 export const DotIndicator: Story = {
   render: Template,
-  args: { src: "https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740", status: "online" },
+  args: { 
+    src: "https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg", 
+    status: "online" 
+  },
 };
+
 
 export const Stacked: Story = {
   render: () => `
     <div style="display: flex; align-items: center;" >
-      <my-avatar src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740" stacked></my-avatar>
-      <my-avatar src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740" stacked></my-avatar>
-      <my-avatar src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740" stacked></my-avatar>
-      <my-avatar src="https://img.freepik.com/free-vector/mysterious-mafia-man-smoking-cigarette_52683-34828.jpg?t=st=1743085895~exp=1743089495~hmac=5c72c502eeb4ec60c66bd5b892cb93db7f3c3063e2612c7bad300ae3f086bbcd&w=740" stacked></my-avatar>
+      <my-avatar src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg" stacked></my-avatar>
+      <my-avatar src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg" stacked></my-avatar>
+      <my-avatar src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg" stacked></my-avatar>
+      <my-avatar src="https://cdn.pixabay.com/photo/2023/06/23/11/23/ai-generated-8083323_960_720.jpg" stacked></my-avatar>
     </div>
   `,
 };

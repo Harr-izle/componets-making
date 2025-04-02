@@ -1,99 +1,187 @@
 .btn {
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
   cursor: pointer;
-  font-size: 16px;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  transition: all 0.2s;
 }
 
-.default {
-  background-color: #1976D2;
+/* Variants */
+.btn-default {
+  background: #3b82f6;
   color: white;
-  border: none;
-  border-radius: 8px;
-  
-}
-.default:hover {
-  background-color: #1565C0
 }
 
-
-.alternative {
-  background-color: #374151;
-  color: #EEEEEE;
-  border: #EEEEEE;
-  border-radius: 8px;
-
-}
-.alternative:hover {
-  background-color: #EEEEEE;
-  color: #212121;
-}
-
-.dark {
-  background-color: #424242;
+.btn-alternative {
+  background: #6b7280;
   color: white;
-  border: none;
-  border-radius: 8px;
- 
-}
-.dark:hover {
-  background-color: #616161;
 }
 
-.light {
-  background-color: #212121;
-  color: #EEEEEE;
-  border: #EEEEEE;
-  border-radius: 8px;
-  
-}
-.light:hover {
-  background-color: #424242;
-
-}
-
-.green {
-  background-color: #388E3C;
+.btn-dark {
+  background: #1f2937;
   color: white;
-  border: none;
-  border-radius: 8px;
-
-}
-.green:hover {
-  background-color: #2E7D32;
 }
 
-.red {
-  background-color: #D32F2F;
+.btn-light {
+  background: #f3f4f6;
+  color: #1f2937;
+  border-color: #e5e7eb;
+}
+
+.btn-green {
+  background: #10b981;
   color: white;
-  border: none;
-  border-radius: 8px;
-
-}
-.red:hover {
-  background-color: #C62828;
 }
 
-.yellow {
-  background-color: #ffe400;
+.btn-red {
+  background: #ef4444;
   color: white;
-  border: none;
-  border-radius: 8px;
-
-}
-.yellow:hover {
-  background-color: #FFEB3B;
 }
 
-.purple {
-  background-color: #7B1FA2;
+.btn-yellow {
+  background: #f59e0b;
   color: white;
-  border: none;
-  border-radius: 8px;
-  
 }
-.purple:hover {
-  background-color: #6A1B9A;
+
+.btn-purple {
+  background: #8b5cf6;
+  color: white;
+}
+
+/* Sizes */
+.btn-xs {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.btn-sm {
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-md {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+.btn-xl {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+}
+
+/* Outline variants */
+.btn-outline {
+  background: transparent;
+  border-width: 1px;
+}
+
+.btn-outline.btn-default {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.btn-outline.btn-alternative {
+  border-color: #6b7280;
+  color: #6b7280;
+}
+
+.btn-outline.btn-dark {
+  border-color: #1f2937;
+  color: #1f2937;
+}
+
+.btn-outline.btn-light {
+  border-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.btn-outline.btn-green {
+  border-color: #10b981;
+  color: #10b981;
+}
+
+.btn-outline.btn-red {
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.btn-outline.btn-yellow {
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.btn-outline.btn-purple {
+  border-color: #8b5cf6;
+  color: #8b5cf6;
+}
+
+/* Social buttons */
+.btn-facebook {
+  background: #1877f2;
+  color: white;
+}
+
+.btn-twitter {
+  background: #1da1f2;
+  color: white;
+}
+
+.btn-google {
+  background: #ea4335;
+  color: white;
+}
+
+.btn-linkedin {
+  background: #0a66c2;
+  color: white;
+}
+
+.btn-github {
+  background: #24292f;
+  color: white;
+}
+
+.btn-outline.btn-facebook {
+  border-color: #1877f2;
+  color: #1877f2;
+}
+
+.btn-outline.btn-twitter {
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+
+.btn-outline.btn-google {
+  border-color: #ea4335;
+  color: #ea4335;
+}
+
+.btn-outline.btn-linkedin {
+  border-color: #0a66c2;
+  color: #0a66c2;
+}
+
+.btn-outline.btn-github {
+  border-color: #24292f;
+  color: #24292f;
+}
+
+/* Pill variant */
+.btn-pill {
+  border-radius: 9999px;
+}
+
+/* Icon button */
+.btn-icon {
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
