@@ -1,4 +1,3 @@
-
 import type { Meta, StoryObj } from '@storybook/web-components';
 
 type Story = StoryObj;
@@ -25,7 +24,7 @@ export default meta;
 export const Default: Story = {
   render: () => `
     <my-accordion header="Default Accordion">
-      <div slot="content">This is the default accordion content.</div>
+      This is the default accordion content.
     </my-accordion>
   `
 };
@@ -33,14 +32,25 @@ export const Default: Story = {
 export const Bordered: Story = {
   render: () => `
     <my-accordion header="Bordered Accordion" variant="bordered">
-      <div slot="content">This is the bordered accordion content.</div>
-    </my-accordion>
-    <my-accordion header="Bordered Accordion" variant="bordered">
-      <div slot="content">This is the bordered accordion content.</div>
-    </my-accordion>
-    <my-accordion header="Bordered Accordion" variant="bordered">
-      <div slot="content">This is the bordered accordion content.</div>
+      This is the bordered accordion content.
     </my-accordion>
   `
-}
+};
+
+export const Nested: Story = {
+  render: () => `
+    <my-accordion header="Parent Accordion">
+      <p>This is the parent accordion content.</p>
+      <my-accordion header="Nested Accordion 1" variant="nested">
+        This is nested accordion 1 content.
+      </my-accordion>
+      <my-accordion header="Nested Accordion 2" variant="nested">
+        This is nested accordion 2 content.
+        <my-accordion header="Deeply Nested Accordion" variant="nested">
+          This is a deeply nested accordion content.
+        </my-accordion>
+      </my-accordion>
+    </my-accordion>
+  `
+};
 
